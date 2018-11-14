@@ -18,7 +18,7 @@ namespace  SquaredInfinity.Foundation.Presentation.Styles.Modern
     public partial class DefaultXamlResources : IXamlResourcesProvider
     {
         // Import Order is higher than Foundation.Presentation Import Order (on which resources from this assembly may depend)
-        public const int ImportOrder = SquaredInfinity.Foundation.Presentation.XamlResources.ImportOrder + 100;
+        public const uint ImportOrder = SquaredInfinity.Foundation.Presentation.XamlResources.ImportOrder + 100;
 
         public void LoadAndMergeResources()
         {
@@ -47,6 +47,13 @@ namespace  SquaredInfinity.Foundation.Presentation.Styles.Modern
             resourceDictionary[typeof(TextBox)] = Application.Current.Resources["Styles.TextBox"];
             resourceDictionary[typeof(TextBlock)] = Application.Current.Resources["Styles.TextBlock"];
             resourceDictionary[typeof(Label)] = Application.Current.Resources["Styles.Label"];
+        }
+
+        public IEnumerable<ResourceDictionary> LoadResources()
+        {
+            var dictionary = new ResourceDictionary();
+            ApplyAllStyles(dictionary);
+            return new[] {dictionary};
         }
     }
 }

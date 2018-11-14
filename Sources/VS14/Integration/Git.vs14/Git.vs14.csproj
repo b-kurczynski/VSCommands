@@ -30,9 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SquaredInfinity.Foundation.DotNet45, Version=1.1.7.22, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\SquaredInfinity.Foundation.1.1.7-beta022\lib\net45\SquaredInfinity.Foundation.DotNet45.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SquaredInfinity.Foundation.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\SquaredInfinity.Foundation.1.5.0\lib\net45\SquaredInfinity.Foundation.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.DotNet45, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\SquaredInfinity.Foundation.1.5.0\lib\net45\SquaredInfinity.Foundation.DotNet45.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.Maths.Core, Version=1.5.1.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\SquaredInfinity.Foundation.Maths.1.5.1\lib\portable-net45+win\SquaredInfinity.Foundation.Maths.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.Maths.Statistics.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\SquaredInfinity.Foundation.1.5.0\lib\net45\SquaredInfinity.Foundation.Maths.Statistics.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -54,6 +62,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\..\..\Shared\Integration\Git\Git.projitems" Label="Shared" />

@@ -27,3 +27,7 @@
 /Sources/VS14/VscPackage.vs14/obj/Release
 /Sources/VS14/Features.Infrastructure.vs14/obj
 /packages
+/Sources/VS14/Presentation.Xaml.Styles.Modern.vs14/obj
+/.vs
+/Backup
+/Sources/VS14/Presentation.Xaml.Styles.Modern.vs14/bin/Debug

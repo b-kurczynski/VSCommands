@@ -32,13 +32,26 @@
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="SquaredInfinity.Foundation.DotNet45, Version=1.1.7.22, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.1.1.7-beta022\lib\net45\SquaredInfinity.Foundation.DotNet45.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SquaredInfinity.Foundation.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.1.5.0\lib\net45\SquaredInfinity.Foundation.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SquaredInfinity.Foundation.Presentation.Xaml.DotNet45, Version=1.1.7.26, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.Presentation.Xaml.1.1.7-beta026\lib\net45\SquaredInfinity.Foundation.Presentation.Xaml.DotNet45.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SquaredInfinity.Foundation.Diagnostics.Infrastructure.DotNet45, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.Diagnostics.Infrastructure.1.2.0\lib\net45\SquaredInfinity.Foundation.Diagnostics.Infrastructure.DotNet45.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.DotNet45, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.1.5.0\lib\net45\SquaredInfinity.Foundation.DotNet45.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.Graphics.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.Graphics.1.5.0\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\SquaredInfinity.Foundation.Graphics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.Maths.Core, Version=1.5.1.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.Maths.1.5.1\lib\portable-net45+win\SquaredInfinity.Foundation.Maths.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.Maths.Statistics.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.1.5.0\lib\net45\SquaredInfinity.Foundation.Maths.Statistics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SquaredInfinity.Foundation.Presentation.Xaml.DotNet45, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b2eb7b1f23e71d09, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SquaredInfinity.Foundation.Presentation.Xaml.1.5.0\lib\net45\SquaredInfinity.Foundation.Presentation.Xaml.DotNet45.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -64,6 +77,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -152,7 +152,7 @@ namespace SquaredInfinity.VSCommands.Features.SolutionBadges
 
         public void RequestRefresh()
         {
-            RefreshThrottle.Invoke(Refresh);
+            RefreshThrottle.InvokeAsync(Refresh);
         }
 
         void Refresh(CancellationToken ct)

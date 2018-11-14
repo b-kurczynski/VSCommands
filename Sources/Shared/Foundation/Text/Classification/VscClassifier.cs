@@ -92,8 +92,8 @@ namespace SquaredInfinity.VSCommands.Foundation.Text.Classification
                         tp = tp.SetBackground(item.ColorableItemInfos[0].GetBackground());
 
                         var fontFlags = (FONTFLAGS)item.ColorableItemInfos[0].dwFontFlags;
-
-                        if (fontFlags.IsFlagSet(FONTFLAGS.FF_BOLD))
+                        
+                        if (fontFlags.HasFlag(FONTFLAGS.FF_BOLD))
                             tp = tp.SetBold(true);
                         else
                             tp = tp.SetBold(false);

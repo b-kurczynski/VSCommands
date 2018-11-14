@@ -53,11 +53,14 @@ namespace SquaredInfinity.VSCommands
             //# Settings Service
             var settings_serializer = new FlexiXmlSerializer();
 
+            ISerializer dupa = null;
+
             settings_serializer.GetOrCreateTypeSerializationStrategy<VersionInstallationInfo>()
                 .SerializeMemberAsAttribute(x => x.Version, x => x.Version != null, (x, _v) => _v.ToString(), _a => new Version(_a.Value));
 
             var settings_location = StaticSettings.AppDataDirectory;
-            IVscSettingsService settings_service = new VscSettingsService(settings_serializer, StaticSettings.AppDataDirectory);
+            //IVscSettingsService settings_service = new VscSettingsService(settings_serializer, StaticSettings.AppDataDirectory);
+            IVscSettingsService settings_service = new VscSettingsService(dupa, StaticSettings.AppDataDirectory);
 
             container.RegisterInstance<IVscSettingsService>(settings_service);
 
@@ -150,8 +153,7 @@ namespace SquaredInfinity.VSCommands
 
         void InitializeUserInterface(IUnityContainer container, IVscUIService uiService)
         {
-            var resources = new SquaredInfinity.Foundation.Presentation.XamlResources();
-            resources.LoadAndMergeResources();
+            SquaredInfinity.Foundation.Presentation.XamlResources.LoadAndMergeAll();
 
             //# Initialize UI using MEF
 
@@ -160,7 +162,7 @@ namespace SquaredInfinity.VSCommands
             compositionContainer.Compose(new CompositionBatch());
 
             //# Import Xaml Resources
-            ResourcesManager.ImportAndLoadAllResources(compositionContainer);
+            ResourcesManager.ImportAndMergeAllResources(compositionContainer);
 
             uiService.ShowDialog(new AttachToView());
         }

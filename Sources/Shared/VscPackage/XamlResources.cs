@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Text;
+using System.Windows;
 
 namespace SquaredInfinity.VSCommands.VscPackage
 {
@@ -11,11 +12,16 @@ namespace SquaredInfinity.VSCommands.VscPackage
     public class XamlResources : IXamlResourcesProvider
     {
         // Import Order is higher than Features Import Order (on which resources from this assembly may depend)
-        public const int ImportOrder = Features.XamlResources.ImportOrder + 100;
+        public const uint ImportOrder = Features.XamlResources.ImportOrder + 100;
 
         public void LoadAndMergeResources()
         {
             ResourcesManager.LoadAndMergeCompiledResourceDictionaryFromThisAssembly("XamlResources.xaml");
+        }
+
+        public IEnumerable<ResourceDictionary> LoadResources()
+        {
+            return new[] { ResourcesManager.LoadResourceDictionary("XamlResources.xaml") };
         }
     }
 }
